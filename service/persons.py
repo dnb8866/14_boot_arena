@@ -30,13 +30,17 @@ class Person:
             self.things_name.append(thing.name)
 
     def get_damage(self, damage: float) -> float:
-        """Расчет полученного урона."""
+        """
+        Расчет полученного урона.
+        :param damage: Урон, который наносится.
+        :return: Урон, который получает персонаж.
+        """
         damage_fact = damage - (damage * self.defence)
         self.hit_points -= damage_fact
         return damage_fact
 
     def attack_damage(self) -> float:
-        """Урона, который наносит персонаж."""
+        """Урон, который наносит персонаж."""
         return self.attack
 
 
